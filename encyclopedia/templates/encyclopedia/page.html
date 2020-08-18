@@ -1,0 +1,14 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{entry}}
+{% endblock %}
+
+{% block body %}
+    <div>
+ 	{{ content|safe }}
+ 	</div>
+ 	<div>
+ 		<a class="btn btn-success" href="{% url 'ency:edit' entry %}" role="button">Edit page</a>
+ 	</div>
+{% endblock %}
